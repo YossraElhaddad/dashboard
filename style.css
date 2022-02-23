@@ -9,13 +9,13 @@
 }
 
 body {
-    background-color: rgb(182, 227, 255)
+    background-color: #E0F2FE;
 }
 
 .container {
     display: grid;
-    grid-template-columns: 0.5fr 2fr 1fr;
-    grid-template-rows: 1fr 1.5fr 1.5fr;
+    grid-template-columns: 0.5fr 2.5fr 0.75fr;
+    grid-template-rows: 0.25fr 350px 350px;
 }
 
 
@@ -93,6 +93,7 @@ span {
 
 .header {
     background-color: white;
+    box-shadow: 1px 2px 3px lightgray;
     display: grid;
     grid-template-columns: 2fr 1.5fr;
     grid-template-rows: 1fr 1fr;
@@ -172,9 +173,11 @@ p {
 
 .nav-list {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     margin-right: 35px;
+    width: 400px;
+    justify-self: center;
 }
 
 button {
@@ -187,6 +190,67 @@ button {
     height: 40px;
     width: 95px;
     border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+/*Working on the main content (Projects)*/
+
+.main-content div.main-title {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+    padding: 10px;
+    margin: 10px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 2.5fr));
+    gap: 30px;
+    height: 100%;
+    margin-right: 50px;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    font-size: 18px;
+    color: #27272A;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.cards p:not(.title) {
+    font-size: 16px;
+    color: #52525B;
+    padding: 10px;
+}
+
+.cards div:not(.card-icons) {
+    position: relative;
+    background-color: white;
+    box-shadow: 1px 2px 3px lightgray;
+    border-left: 5px solid #F43F5E;
+    border-radius: 10px;
+    height: 270px;
+    width: 350px;
+}
+
+.cards i {
+    font-size: 1.5rem;
+}
+
+.cards .card-icons {
+    position: absolute;
+    display: flex;
+    width: 120px;
+    justify-content: space-between;
+    bottom: 10px;
+    right: 15px;
 }
 
 .announcements {
