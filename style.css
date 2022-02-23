@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+:root {
+    --font: 'Fira Sans', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(182, 227, 255)
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr;
+    grid-template-rows: 1fr 1.5fr 1.5fr;
+}
+
+.sidebar {
+    background-color: #0EA5E9;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 0.25fr 1fr 0.5fr 1fr;
+    grid-template-columns: 1fr 1.5fr;
+    grid-row: 1 / 4;
+    align-content: center;
+    justify-content: start;
+    gap: 20px 100px;
+}
+
+.sidebar i,
+span {
+    color: white;
+    font-weight: bold;
+    font-family: var(--font);
+}
+
+span {
+    justify-self: self-start;
+    font-size: 18px;
+    padding: 15px;
+}
+
+.sidebar i {
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+.first-section,
+.second-section,
+.dashboard {
+    display: grid;
+    grid-column-start: 1;
+}
+
+.second-section {
+    margin-top: 30px;
+}
+
+.first-section div,
+.second-section div,
+.dashboard {
+    display: grid;
+    grid-template-columns: 0.25fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard span {
+    font-size: 24px;
+    place-self: end;
+    align-self: center;
+    padding: 5px;
+}
+
+.dashboard i {
+    font-size: 2.5rem;
+    justify-self: end;
+    padding: 5px;
+}
+
+.sidebar i {
+    justify-self: self-end;
+}
+
+.header {
+    background-color: white;
+    grid-column: 2 / 4;
+}
+
+.announcements {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.trending {
+    grid-area: 3 / 3 / 4 / 4;
+}
